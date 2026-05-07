@@ -1,0 +1,46 @@
+# Plan d'implémentation V3 : Gestion Multi-Rôles
+
+Pour rendre la plateforme complète, nous allons introduire une gestion des rôles (Admin, Coach, Client) qui modifiera l'expérience de l'application en fonction de la personne connectée.
+
+## 👥 Les 3 Rôles Utilisateurs
+
+### 1. Le Client (Ce que nous avons déjà construit)
+- **Objectif** : S'entraîner, réserver, payer.
+- **Vues** : Tableau de bord (Suivi), Réservation de cours, Profil (Abonnement, QR Code), et Paiement (Wave/Orange Money).
+
+### 2. Le Coach
+- **Objectif** : Gérer son planning et ses clients premium.
+- **Nouvelles Vues** :
+  - `CoachDashboard.jsx` : Voir ses cours de la journée (ex: Prépa Lutte à 18h) et la liste des participants.
+  - Gestion de ses "Clients Premium" (ceux qui ont souscrit au Scale).
+
+### 3. L'Administrateur (Le Gérant de la salle)
+- **Objectif** : Superviser l'activité de la salle (FitnessPlus Pikine).
+- **Nouvelles Vues** :
+  - `AdminDashboard.jsx` : Vue globale avec le Chiffre d'Affaires du mois (FCFA), le nombre de membres actifs, et les alertes (ex: abonnement expiré).
+  - Gestion du planning général et des coachs.
+
+## 🛠️ Changements Techniques Proposés
+
+#### [MODIFY] `src/pages/Auth.jsx`
+Nous allons modifier l'écran de connexion pour ajouter un "Sélecteur de Rôle" pour la démonstration. L'utilisateur pourra choisir de se connecter en tant que *Client*, *Coach* ou *Admin*.
+
+#### [NEW] `src/pages/AdminDashboard.jsx`
+Création d'un tableau de bord de gestion (KPIs, Graphiques simples, Liste des membres récents).
+
+#### [NEW] `src/pages/CoachDashboard.jsx`
+Création d'un tableau de bord pour les entraîneurs (Planning personnel, Élèves à suivre).
+
+#### [MODIFY] `src/components/BottomNav.jsx`
+La barre de navigation en bas de l'écran s'adaptera au rôle :
+- *Client* : Accueil, Cours, Pass, Profil
+- *Coach* : Mon Planning, Mes Élèves, Profil
+- *Admin* : Vue Globale, Membres, Paramètres Salle
+
+#### [MODIFY] `src/App.jsx`
+Mise en place d'une logique de routage qui redirige l'utilisateur vers le bon tableau de bord en fonction de son rôle après la connexion.
+
+---
+
+> [!IMPORTANT]
+> **Validation Requise** : La création de ces trois espaces distincts est un grand pas en avant. L'approche consistant à simuler la connexion avec des boutons "Rôle" sur la page Auth vous convient-elle pour le moment ? Avez-vous d'autres statistiques spécifiques que vous aimeriez voir sur le Dashboard Admin (ex: fréquentation par heure) ? Dès que vous validez, je lance le développement !

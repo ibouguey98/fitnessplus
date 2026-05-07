@@ -1,0 +1,18 @@
+# Tâches Ultra-Premium FitnessPlus
+
+- [ ] **Onboarding Client**
+    - [ ] Créer `Onboarding.jsx`
+    - [ ] Intégrer dans le flux d'authentification
+    - [ ] Sauvegarder les données (Goal, Weight, Level)
+- [ ] **Coach UX Pro**
+    - [ ] Ajouter la gestion des revenus (Graphique)
+    - [ ] Ajouter le statut de disponibilité
+    - [ ] Améliorer la liste des séances
+- [ ] **Boutique Intégrée**
+    - [ ] Créer la structure des produits
+    - [ ] Implémenter les catégories
+    - [ ] Ajouter l'interaction du panier
+- [ ] **Design Apple-Style & Animations**
+    - [ ] Refonte CSS globale (Glow, Transitions)
+    - [ ] Animations d'entrée (Stagger)
+    - [ ] Polissage Premium (Micro-interactions)

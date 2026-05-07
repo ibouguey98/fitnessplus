@@ -1,0 +1,41 @@
+# Plan de Mise à Niveau Ultra-Premium : FitnessPlus 2.0
+
+Ce plan vise à transformer le prototype actuel en une application de classe mondiale avec un design inspiré d'Apple et une expérience utilisateur profonde pour les clients et les coachs.
+
+## User Review Required
+
+> [!IMPORTANT]
+> L'ajout de l'onboarding changera le flux initial de l'application (Auth -> Onboarding -> Dashboard).
+> Le design passera à un style "Apple Health" plus épuré mais très dynamique.
+
+## Proposed Changes
+
+### 1. Expérience Client : Onboarding Dynamique
+Création d'un parcours de bienvenue pour personnaliser l'expérience.
+- **[NEW] [Onboarding.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Onboarding.jsx)** : Formulaire en 3 étapes (Objectif -> Poids/Taille -> Niveau).
+- **[MODIFY] [Auth.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Auth.jsx)** : Redirection vers l'onboarding pour les nouveaux comptes.
+
+### 2. Expérience Coach : Dashboard Professionnel
+- **[MODIFY] [CoachDashboard.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/CoachDashboard.jsx)** :
+    - Ajout d'un graphique de revenus hebdomadaires.
+    - Sélecteur de disponibilité (En ligne / Occupé).
+    - Liste des séances prévues avec boutons d'action.
+
+### 3. Boutique Intégrée (Pro)
+- **[MODIFY] [Shop.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Shop.jsx)** :
+    - Catégories (Compléments, Équipement, Merchandising).
+    - Système de panier avec animation de l'icône.
+
+### 4. Design Ultra-Premium (Style Apple)
+- **[MODIFY] [index.css](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/index.css)** :
+    - Introduction de variables pour le "Glow" dynamique.
+    - Utilisation de `SF Pro` ou `Inter` pour la typographie.
+    - Animations de transition plus complexes (staggered entries).
+
+## Verification Plan
+
+### Manual Verification
+1. Tester le flux d'onboarding complet.
+2. Vérifier l'affichage des revenus sur le dashboard coach.
+3. Simuler un achat dans la boutique.
+4. Valider la fluidité des animations sur mobile (simulateur).

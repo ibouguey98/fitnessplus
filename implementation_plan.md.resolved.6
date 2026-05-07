@@ -1,0 +1,59 @@
+# Transformation Ultra-Premium "NAROU FITNESS"
+
+Le but est d'atteindre le niveau d'excellence visuelle du modèle fourni : un design noir pur, des accents jaune néon, des cartes glassmorphismes sophistiquées et une ergonomie d'application mobile native de luxe.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Cette refonte est massive. Elle va modifier l'apparence de CHAQUE page pour correspondre exactement au style "Narou". Le nom restera **FitnessPlus** mais avec l'esthétique du modèle.
+
+## Proposed Changes
+
+### 🎨 Design System & CSS
+#### [MODIFY] [index.css](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/index.css)
+- Mise à jour des variables de couleurs pour un noir plus profond (`#050505`).
+- Ajout de classes de composants pour les cartes "Activity", "Progression" et "Leaderboard".
+- Optimisation des ombres portées et des flous (blur).
+
+### 🚀 Flux d'Onboarding (Écrans 1.1 à 1.4)
+#### [MODIFY] [Auth.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Auth.jsx)
+- Nouvel écran d'accueil avec image de fond héroïque et boutons massifs.
+#### [MODIFY] [Onboarding.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Onboarding.jsx)
+- Refonte des étapes : Choix de profil (Coach/Client), Objectif Principal (avec icônes jaunes), et Infos Personnelles.
+
+### 🏠 Dashboard Client (Écran 2)
+#### [MODIFY] [Dashboard.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Dashboard.jsx)
+- Intégration de la barre de progression circulaire.
+- Graphique d'activité hebdomadaire stylisé.
+- Section "Mes programmes" avec cartes horizontales.
+
+### 🛒 Boutique & Produits (Écrans 5, 6, 7)
+#### [MODIFY] [Shop.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Shop.jsx)
+- Grille de produits "Meilleures ventes".
+- Barre de recherche intégrée au style.
+- Ajout d'une page **ProductDetail.jsx** [NEW] et **Cart.jsx** [NEW].
+
+### 🏆 Challenges & Social (Écran 9)
+#### [NEW] [Challenges.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Challenges.jsx)
+- Liste des challenges en cours.
+- Classement (Leaderboard) avec avatars.
+
+### 💳 Paiement & Facturation (Écran 8)
+#### [MODIFY] [Payments.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/Payments.jsx)
+- Design épuré, bouton de paiement massif jaune.
+- Sélection radio stylisée pour Wave / Orange Money.
+
+### 📊 Dashboard Admin Web (Écran 12)
+#### [MODIFY] [AdminSaaS.jsx](file:///C:/Users/UVS/.gemini/antigravity/scratch/fitnessplus/src/pages/AdminSaaS.jsx)
+- Refonte totale pour correspondre à la version Desktop du modèle.
+- Sidebar noire latérale, graphiques en lignes fluides.
+
+## Verification Plan
+
+### Automated Tests
+- `npm run lint` pour vérifier la propreté du code.
+- Vérification visuelle sur plusieurs résolutions mobiles.
+
+### Manual Verification
+- Parcours complet de l'utilisateur : Auth -> Onboarding -> Dashboard -> Boutique -> Paiement.
+- Test de la réactivité du Dashboard Admin.

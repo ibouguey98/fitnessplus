@@ -1,0 +1,32 @@
+# Plan d'implémentation V5 : Finalisation de l'Application
+
+Vous avez raison, il ne doit rester aucune zone d'ombre ou page "en cours de développement" pour que l'application soit totalement complète. Je vais développer les 5 dernières pages manquantes pour les rôles **Admin** et **Coach**.
+
+## 🛠️ Pages à Créer
+
+### Pour l'Espace Admin
+1. **`AdminMembers.jsx` (Gestion des Membres)** : 
+   - Liste de tous les abonnés (ex: Ibrahima Fall, Moussa Diop).
+   - Statut de leur abonnement (Actif / Expiré).
+   - Bouton pour relancer les impayés.
+2. **`AdminSettings.jsx` (Paramètres Salle)** :
+   - Horaires d'ouverture de FitnessPlus Pikine.
+   - Gestion des accès.
+   - Options globales (Notifications).
+
+### Pour l'Espace Coach
+3. **`CoachPlanning.jsx` (Planning Complet)** :
+   - Vue calendrier de la semaine avec tous les cours que le coach doit animer.
+4. **`CoachClients.jsx` (Mes Élèves)** :
+   - Liste complète des clients "Premium" suivis par le coach, avec leurs courbes d'évolution.
+5. **`CoachProfileEdit.jsx` (Mon Profil Coach)** :
+   - Permet au coach de modifier sa biographie, ses disponibilités et de voir ses avis.
+
+## 🔗 Mise à jour du Routage
+- Modification de `BottomNav.jsx` pour remplacer tous les liens `#` par les vraies routes (`/admin/members`, `/admin/settings`, `/coach/planning`, etc.).
+- Ajout de ces 5 routes dans `App.jsx`.
+
+---
+
+> [!IMPORTANT]
+> **Validation Requise** : Ce plan couvre toutes les sections "en développement" que vous aviez remarquées. Si ces interfaces vous conviennent, confirmez-moi avec un "Go" et je construis immédiatement ces 5 dernières pages pour finaliser l'application !

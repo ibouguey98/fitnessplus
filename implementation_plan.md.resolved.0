@@ -1,0 +1,75 @@
+# Plan d'implémentation : Application Mobile "FitnessPlus"
+
+Ce document propose une architecture et un ensemble de fonctionnalités pour "FitnessPlus", votre nouvelle application mobile pour salle de sport.
+
+## Résumé du Projet
+Nous allons créer une application web progressive (PWA) orientée "mobile-first". Cela signifie qu'elle sera développée avec des technologies web (React, Vite) mais qu'elle aura l'apparence, la fluidité et l'ergonomie d'une application mobile native. Vos utilisateurs pourront l'installer directement sur l'écran d'accueil de leur téléphone.
+
+> [!IMPORTANT]
+> **Validation Requise** : Veuillez lire les fonctionnalités proposées ci-dessous et me confirmer si cela correspond à votre vision, ou si vous souhaitez ajouter/retirer des éléments avant que je commence à coder.
+
+## Fonctionnalités Proposées (Les "Indispensables" pour une salle de sport)
+
+1. **Tableau de Bord (Accueil)**
+   - Résumé des activités de la semaine.
+   - Prochaines réservations de cours.
+   - Statistiques rapides (fréquentation, temps passé).
+
+2. **Carte d'Accès Digitale (QR Code)**
+   - Un QR Code unique pour permettre à l'utilisateur de scanner et d'entrer dans la salle de sport directement depuis l'application.
+
+3. **Planning et Réservation de Cours**
+   - Calendrier interactif des cours collectifs (Yoga, Crossfit, Zumba, etc.).
+   - Possibilité de réserver ou d'annuler sa place en un clic.
+   - Affichage du nombre de places restantes.
+
+4. **Programmes d'Entraînement**
+   - Bibliothèque d'exercices et programmes personnalisés (Perte de poids, Prise de masse).
+   - Suivi des séries, répétitions et temps de repos.
+
+5. **Profil et Gestion de l'Abonnement**
+   - Informations personnelles de l'utilisateur.
+   - Statut de l'abonnement (Actif, Expiré).
+   - Paramètres de l'application (Mode sombre, notifications).
+
+## Stack Technique
+- **Framework** : React (avec Vite pour des performances optimales).
+- **Style** : Vanilla CSS moderne (Design fluide, animations, mode sombre natif, "Glassmorphism" pour un aspect premium).
+- **Icônes** : Lucide React (pour des icônes claires et modernes).
+- **Routage** : React Router (navigation fluide avec une barre de navigation en bas d'écran, typique des applications mobiles).
+
+## Changements Proposés (Architecture des fichiers)
+
+Nous allons créer le projet dans le dossier `C:\Users\UVS\.gemini\antigravity\scratch\fitnessplus`.
+
+### Initialisation du projet
+- Création du projet Vite/React.
+- Configuration du projet pour un affichage mobile (Viewport, manifest PWA).
+
+### Composants Principaux
+#### [NEW] `src/components/BottomNav.jsx`
+Barre de navigation principale en bas de l'écran (Accueil, Cours, QR Code, Profil).
+
+#### [NEW] `src/pages/Dashboard.jsx`
+Page d'accueil avec les statistiques et le résumé.
+
+#### [NEW] `src/pages/Classes.jsx`
+Planning et réservation.
+
+#### [NEW] `src/pages/QRCodeAccess.jsx`
+Affichage du pass d'entrée.
+
+#### [NEW] `src/pages/Profile.jsx`
+Gestion du compte utilisateur.
+
+## Plan de Vérification
+1. Développer l'interface complète avec des données fictives ("mock data") pour que vous puissiez tester la navigation et le design de l'application.
+2. Lancer un serveur de développement local et vérifier l'ergonomie mobile, les animations et la fluidité.
+3. Affiner le design selon vos retours pour s'assurer que l'application a un aspect très "premium".
+
+---
+
+> [!NOTE]
+> **Questions Ouvertes** :
+> 1. Quelles couleurs souhaitez-vous utiliser pour la marque FitnessPlus ? (Ex: Noir et Or, Bleu marine et Cyan, Sombre avec des accents Néon...)
+> 2. Souhaitez-vous d'autres fonctionnalités spécifiques que je n'aurais pas listées (ex: messagerie avec un coach, boutique de compléments alimentaires) ?

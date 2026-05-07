@@ -1,0 +1,53 @@
+# Plan d'implémentation V2 : FitnessPlus "Premium & Scale"
+
+Suite à vos excellentes suggestions, nous allons faire évoluer l'application vers un produit beaucoup plus complet, premium et adapté au marché sénégalais (Dakar, Pikine).
+
+## 🎨 1. Refonte du Design System (Premium Scale)
+- **Nouveau Thème** : Remplacement du vert/bleu par un thème **Jaune et Violet**. Nous utiliserons un fond sombre violacé profond avec des accents jaune vif/or pour garder le côté "Premium" et énergique.
+- **Glassmorphism** : Renforcement des effets de transparence pour un look très moderne.
+
+## 💳 2. Paiements Locaux (Wave & Orange Money)
+- **Page de Paiement** : Création d'une interface de paiement réaliste intégrant les boutons aux couleurs officielles de **Wave** (Bleu clair) et **Orange Money** (Orange).
+- **Offres "Scale"** : Ajout d'une section "Premium Coaching" (Croissance) permettant aux utilisateurs de s'abonner à des plans plus chers (Accès VIP, Suivi nutritionnel).
+
+## 🇸🇳 3. Programmes Adaptés au Sénégal
+- Création d'un onglet ou d'une section "Programmes Locaux".
+- Exemples de programmes : 
+  - *Préparation Physique type Lutte Sénégalaise* (Force et explosivité).
+  - *Cardio Corniche / Plage* (Endurance).
+  - *Remise en forme "Ndaw Rabal"* (Agilité).
+
+## 👤 4. Création de Compte & Statistiques (Suivi Client)
+- **Nouvelle Page : Inscription / Connexion**. L'utilisateur arrivera d'abord sur cette page avant de voir le tableau de bord.
+- **Suivi Client** : Le tableau de bord affichera des statistiques d'évolution (Poids perdu, Séances complétées) pour fidéliser le client.
+
+## 🏋️ 5. Réservation & Profils des Coachs
+- **Amélioration des Réservations** : Au clic sur un cours, ouverture d'un écran de confirmation.
+- **Nouvelle Page : Profil du Coach**. Affichage de la photo du coach, de sa bio, de sa spécialité et d'un bouton pour réserver un "Premium Coaching" privé (Personal Training) avec lui.
+
+---
+
+## 🛠️ Changements Techniques Prévus
+
+#### [MODIFY] `src/index.css`
+Mise à jour de toutes les variables de couleurs (`--primary: #f59e0b`, `--secondary: #8b5cf6`, `--bg-dark: #1e1b4b`).
+
+#### [NEW] `src/pages/Auth.jsx`
+Page de connexion / création de compte avec formulaire (Email, Mot de passe).
+
+#### [NEW] `src/pages/CoachProfile.jsx`
+Page détaillée pour un coach (Bio, Tarifs Coaching Premium).
+
+#### [NEW] `src/pages/Payments.jsx`
+Interface de facturation avec intégration visuelle Wave et Orange Money.
+
+#### [MODIFY] `src/App.jsx`
+Ajout des nouvelles routes (`/auth`, `/coach`, `/payment`).
+
+#### [MODIFY] `src/pages/Dashboard.jsx` & `src/pages/Classes.jsx`
+Intégration des statistiques de suivi client et des programmes 100% adaptés au Sénégal.
+
+---
+
+> [!IMPORTANT]
+> **Validation Requise** : L'implémentation de ces fonctionnalités (notamment la page de création de compte et les paiements) va modifier la structure de base du projet. Êtes-vous d'accord avec cette nouvelle architecture et les noms des programmes proposés ? Dès votre feu vert, j'écris le code !

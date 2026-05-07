@@ -1,0 +1,13 @@
+# Tâches pour l'application FitnessPlus
+
+- [x] Initialiser le projet Vite avec React.
+- [/] Installer les dépendances (react-router-dom, lucide-react).
+- [ ] Configurer les styles de base (index.css) et l'identité visuelle (Design Premium, Mode Sombre).
+- [ ] Créer la structure du projet (dossiers pages, components).
+- [ ] Créer le composant BottomNav (Navigation Mobile).
+- [ ] Créer la page Dashboard (Accueil avec statistiques et infos locales - FCFA, Dakar/Pikine).
+- [ ] Créer la page Classes (Réservation des cours).
+- [ ] Créer la page QRCodeAccess (Carte d'accès).
+- [ ] Créer la page Profile (Profil et Abonnement).
+- [ ] Configurer les routes dans App.jsx.
+- [ ] Validation et tests.

@@ -1,0 +1,50 @@
+# Plan d'implémentation V4 : La "Super-App" FitnessPlus
+
+Votre vision est ambitieuse et excellente. Vous décrivez une "Super-App" de fitness, équivalente aux meilleures plateformes mondiales, mais entièrement adaptée au marché sénégalais. 
+
+Pour passer de notre prototype actuel à cette application complète, nous devons structurer massivement le projet. Voici le plan pour intégrer tous ces nouveaux modules.
+
+## 🏗️ Architecture des Nouveaux Modules
+
+### 1. 🛍️ La Boutique Intégrée (E-Commerce)
+- **Catalogue Produits** : Suppléments (Whey, Protéines locales), Équipements de sport, Boissons énergisantes.
+- **Panier & Checkout** : Panier d'achat intégré avec paiement direct via Wave ou Orange Money.
+- **Recommandations** : Liées à l'Assistant Intelligent (ex: "Vous faites de la prise de masse ? Voici la Whey Recommandée").
+
+### 2. 🤖 L'Assistant Intelligent (Coach IA)
+- **Chatbot / Widget de recommandation** sur le tableau de bord client.
+- Il analysera les objectifs (ex: Perte de poids) pour recommander des séances spécifiques et des plans de nutrition locaux (ex: "Réduire le riz le soir, privilégier le Thieb diète").
+
+### 3. 🏆 Module Communautaire (Gamification)
+- **Défis (Challenges)** : Ex: "Défi 10km Corniche" ou "Défi Abdos 30 Jours".
+- **Classement (Leaderboard)** : Classement des membres de la salle selon leur assiduité.
+- **Transformations** : Galerie Avant/Après pour motiver la communauté.
+
+### 4. 📈 Back-Office Admin & Gestion de Salle
+- **Gestion des Membres** : Liste complète, statut d'abonnement (Actif/Expiré), historique des paiements.
+- **Contrôle d'Accès** : Simulateur de scan des QR Codes à l'entrée.
+- **Gestion Boutique** : Ajouter/Modifier des produits, suivi des commandes.
+- **Finances** : Graphiques de revenus (Abonnements + Boutique).
+
+### 5. 📋 Suivi & Programmes (Client & Coach)
+- **Client** : Saisie du poids, visualisation de courbes de progression, programmes détaillés (séries/répétitions).
+- **Coach** : Gestion de son calendrier de disponibilités, réception d'avis (système d'étoiles).
+
+---
+
+## 💻 Plan Technique & Nouvelles Pages
+
+L'application va devenir massive. Nous allons ajouter un menu latéral ou réorganiser la navigation pour faire tenir toutes ces fonctionnalités sans surcharger l'écran.
+
+**Nouvelles Pages Prévues :**
+- `src/pages/Shop.jsx` (Catalogue Boutique)
+- `src/pages/Cart.jsx` (Panier)
+- `src/pages/Community.jsx` (Challenges & Classements)
+- `src/pages/SmartAssistant.jsx` (Recommandations IA)
+- `src/pages/Progress.jsx` (Courbes de poids et Nutrition)
+- `src/pages/admin/MembersManager.jsx` (CRM Admin)
+- `src/pages/admin/ShopManager.jsx` (Inventaire Admin)
+- `src/pages/coach/ScheduleManager.jsx` (Dispo Coach)
+
+> [!IMPORTANT]
+> **Validation Requise** : La création de cette Super-App demande d'ajouter de nombreuses pages (Boutique, Communauté, Assistant). Pour que la navigation reste fluide sur mobile, je propose d'ajouter un **Menu "Tiroir" (Hamburger Menu)** en plus de la barre du bas pour accéder à la boutique et à la communauté. Êtes-vous d'accord avec cette approche de navigation ? Si oui, je lance la construction de la Super-App !
